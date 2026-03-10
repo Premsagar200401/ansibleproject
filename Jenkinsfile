@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage(' GitHub Repository clone') {
-            steps {
-                git url: 'https://github.com/Premsagar200401/ansibleproject.git',
-                branch: 'main'
-            }
-        }
-
         stage('Execute Ansible Playbook') {
             steps {
                 sh '''
